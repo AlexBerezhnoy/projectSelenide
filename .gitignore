@@ -1,2 +1,4 @@
 /.idea/
-/projectSelenide.iml
+/*.iml
+/target/
+/build/
