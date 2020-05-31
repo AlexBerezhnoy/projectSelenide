@@ -16,6 +16,8 @@ public class TestBase {
 
     static {
         Configuration.baseUrl = "https://react-redux.realworld.io/";
+        Configuration.screenshots = false;
+        Configuration.savePageSource = false;
     }
 
     @BeforeMethod
