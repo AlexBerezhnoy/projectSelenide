@@ -4,7 +4,7 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "classpath:test.properties",
+        "classpath:test2.properties",
         "system:properties",
         "system:env"})
 public interface UserConfiguration extends Config {
