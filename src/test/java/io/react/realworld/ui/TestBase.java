@@ -1,9 +1,11 @@
-package io.react.realworld;
+package io.react.realworld.ui;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import com.hillel.auto.config.BrowserConfiguration;
 import com.hillel.auto.page.object.HomePage;
 import com.hillel.auto.page.object.RegistrationPage;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 
@@ -13,11 +15,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class TestBase {
 
+    private static final BrowserConfiguration browserConfiguration= ConfigFactory.create(BrowserConfiguration.class);
 
     static {
         Configuration.baseUrl = "https://react-redux.realworld.io/";
         Configuration.screenshots = false;
         Configuration.savePageSource = false;
+        Configuration.browser = browserConfiguration.remoteChrome();
     }
 
     @BeforeMethod

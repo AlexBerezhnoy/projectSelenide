@@ -1,4 +1,4 @@
-package io.react.realworld;
+package io.react.realworld.ui;
 
 import com.hillel.auto.config.UserConfig;
 import com.hillel.auto.page.object.LoginPage;
@@ -13,6 +13,7 @@ public class LoginTest extends TestBase {
         String userName = UserConfig.getInstance().userName();
         String email = UserConfig.getInstance().userEmail();
         String password = UserConfig.getInstance().userPassword();
+
 
         loginPage
                 .openPage()

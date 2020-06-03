@@ -1,4 +1,4 @@
-package io.react.realworld;
+package io.react.realworld.ui;
 
 import com.hillel.auto.config.UserConfig;
 import com.hillel.auto.page.object.*;

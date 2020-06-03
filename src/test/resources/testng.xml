@@ -9,7 +9,7 @@
     <test name="Login tests">
 
         <classes>
-            <class name="io.react.realworld.FieldsSingInValidationTest"/>
+            <class name="io.react.realworld.ui.FieldsSingInValidationTest"/>
         </classes>
     </test>
 

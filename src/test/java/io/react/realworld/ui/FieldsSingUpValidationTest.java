@@ -1,4 +1,4 @@
-package io.react.realworld;
+package io.react.realworld.ui;
 
 import com.hillel.auto.page.object.RegistrationPage;
 import org.testng.annotations.Test;

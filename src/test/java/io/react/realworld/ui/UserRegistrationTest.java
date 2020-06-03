@@ -1,4 +1,4 @@
-package io.react.realworld;
+package io.react.realworld.ui;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.hillel.auto.model.User;
