@@ -2,12 +2,17 @@ package io.react.realworld.ui;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import com.hillel.auto.config.BrowserConfiguration;
 import com.hillel.auto.page.object.HomePage;
 import com.hillel.auto.page.object.RegistrationPage;
+import io.qameta.allure.selenide.AllureSelenide;
+import io.qameta.allure.selenide.LogType;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
+
+import java.util.logging.Level;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -21,7 +26,11 @@ public class TestBase {
         Configuration.baseUrl = "https://react-redux.realworld.io/";
         Configuration.screenshots = false;
         Configuration.savePageSource = false;
-        Configuration.browser = browserConfiguration.remoteChrome();
+//        Configuration.browser = browserConfiguration.remoteChrome();
+        SelenideLogger.addListener("AllureSelenide",
+                new AllureSelenide().screenshots(true)
+                        .savePageSource(true)
+                        .enableLogs(LogType.BROWSER, Level.INFO));
     }
 
     @BeforeMethod

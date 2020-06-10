@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke test suite" parallel="classes" thread-count="${thread.count}">
+
+    <listeners>
+        <listener class-name="com.hillel.auto.listener.TestMethodExecutionListener"/>
+    </listeners>
+
+    <test name="Login tests">
+
+        <classes>
+        <class name="io.react.realworld.ui.LoginTest"/>
+        <class name="io.react.realworld.ui.UserRegistrationTest"/>
+        <class name="io.react.realworld.ui.FieldsSingInValidationTest"/>
+        <class name="io.react.realworld.ui.FieldsSingUpValidationTest"/>
+    </classes>
+    </test>
+
+</suite>

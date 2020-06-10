@@ -1,16 +1,18 @@
 package io.react.realworld.ui;
 
 import com.hillel.auto.page.object.LoginPage;
+import io.qameta.allure.*;
 import org.testng.annotations.Test;
 
 import java.util.Random;
-
+@Feature("Authorization feature")
+@Story("Registration story")
 public class FieldsSingInValidationTest extends TestBase{
-
-
     String email = "testuser"+new Random().nextInt(10000)+"@rambler.ru";
     String password = "qwerty123";
 
+    @Severity(SeverityLevel.BLOCKER)
+    @TmsLink("BUG1543")
     @Test
     public void emailBlankValidationTest () {
         clickLoginButton();
@@ -23,6 +25,8 @@ public class FieldsSingInValidationTest extends TestBase{
 
     }
 
+    @Severity(SeverityLevel.MINOR)
+    @TmsLink("BUG1542")
     @Test
     public void emailWrongValidationTest () {
         clickLoginButton();
@@ -34,6 +38,8 @@ public class FieldsSingInValidationTest extends TestBase{
 
     }
 
+    @Severity(SeverityLevel.MINOR)
+    @TmsLink("BUG1545")
     @Test
     public void passwordWrongValidationTest () {
         clickLoginButton();
@@ -46,6 +52,8 @@ public class FieldsSingInValidationTest extends TestBase{
 
     }
 
+    @Severity(SeverityLevel.MINOR)
+    @TmsLink("BUG1546")
     @Test
     public void passwordBlankValidationTest () {
         clickLoginButton();

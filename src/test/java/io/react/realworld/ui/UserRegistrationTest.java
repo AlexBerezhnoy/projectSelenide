@@ -3,14 +3,18 @@ package io.react.realworld.ui;
 import com.codeborne.selenide.CollectionCondition;
 import com.hillel.auto.model.User;
 import com.hillel.auto.utils.UserData;
+import io.qameta.allure.*;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
-
+@Feature("Authorization feature")
+@Story("Registration story")
 public class UserRegistrationTest extends TestBase {
 
+    @Severity(SeverityLevel.BLOCKER)
+    @TmsLink("BUG3545")
     @Test
     public void registrationTest() {
         clickRegistrationButton();
@@ -24,6 +28,8 @@ public class UserRegistrationTest extends TestBase {
         userShouldBeLoggedIn(user.getUsername());
     }
 
+    @Severity(SeverityLevel.NORMAL)
+    @TmsLink("BUG3546")
     @Test
     public void validationRegistrationForm() {
         clickRegistrationButton();
