@@ -11,7 +11,7 @@
 <!--            <package name="io.react.realworld.api"/>-->
 <!--        </packages>-->
         <classes>
-            <class name="io.react.realworld.ui.LoginTest"/>
+            <class name="io.react.realworld.api.LoginTest"/>
         </classes>
     </test>
 
