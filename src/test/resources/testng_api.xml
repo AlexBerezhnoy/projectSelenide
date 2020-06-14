@@ -7,12 +7,12 @@
     </listeners>
 
     <test name="Api tests">
-        <packages>
-            <package name="io.react.realworld.api"/>
-        </packages>
-<!--        <classes>-->
-<!--            <class name="io.react.realworld.ui.FieldsSingInValidationTest"/>-->
-<!--        </classes>-->
+<!--        <packages>-->
+<!--            <package name="io.react.realworld.api"/>-->
+<!--        </packages>-->
+        <classes>
+            <class name="io.react.realworld.ui.LoginTest"/>
+        </classes>
     </test>
 
 </suite>
