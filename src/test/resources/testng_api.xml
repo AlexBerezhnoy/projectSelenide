@@ -3,13 +3,13 @@
 <suite name="Smoke test API suite">
 
     <listeners>
-        <listener class-name="com.hillel.auto.listener.TestMethodExecutionListener"/>
+        <listener class-name="com.hillel.auto.listener.LogListener"/>
     </listeners>
 
     <test name="Api tests">
         <classes>
             <class name="io.react.realworld.api.LoginTest"/>
-            <class name="io.react.realworld.api.LoginTest"/>
+            <class name="io.react.realworld.api.RegistrationTest"/>
         </classes>
     </test>
 
