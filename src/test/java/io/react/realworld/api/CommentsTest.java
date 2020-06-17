@@ -1,5 +1,6 @@
 package io.react.realworld.api;
 
+import com.hillel.auto.listener.LogListener;
 import com.hillel.auto.model.*;
 import com.hillel.auto.service.UserService;
 import io.restassured.RestAssured;
@@ -7,10 +8,11 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
-
+@Listeners(LogListener.class)
 public class CommentsTest {
     private UserService userService = new UserService();
     private User user;

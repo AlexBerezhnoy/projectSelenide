@@ -24,7 +24,7 @@ public class TestBase {
 
     static {
         Configuration.baseUrl = "https://react-redux.realworld.io/";
-        Configuration.screenshots = false;
+        Configuration.screenshots = true;
         Configuration.savePageSource = false;
         Configuration.browser = browserConfiguration.remoteChrome();
         SelenideLogger.addListener("AllureSelenide",

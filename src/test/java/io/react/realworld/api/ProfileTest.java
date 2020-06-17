@@ -1,5 +1,6 @@
 package io.react.realworld.api;
 
+import com.hillel.auto.listener.LogListener;
 import com.hillel.auto.model.Profile;
 import com.hillel.auto.model.ProfileResponse;
 import com.hillel.auto.model.User;
@@ -9,8 +10,9 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
+@Listeners(LogListener.class)
 public class ProfileTest {
     private UserService userService = new UserService();
     private User user;

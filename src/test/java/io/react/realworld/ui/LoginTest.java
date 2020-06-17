@@ -21,6 +21,6 @@ public class LoginTest extends TestBase {
         loginPage
                 .openPage()
                 .login(email, password)
-                .isUserLoggedIn(userName);
+                .isUserLoggedIn(userName+"  ");
     }
 }
