@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Smoke test suite">
+<suite name="Smoke test UI suite">
 
     <listeners>
         <listener class-name="com.hillel.auto.listener.TestMethodExecutionListener"/>
@@ -10,6 +10,7 @@
 
         <classes>
             <class name="io.react.realworld.ui.LoginTest"/>
+            <class name="io.react.realworld.ui.UserRegistrationTest"/>
         </classes>
     </test>
 

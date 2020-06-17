@@ -3,6 +3,7 @@ package io.react.realworld.api;
 import com.hillel.auto.listener.LogListener;
 import com.hillel.auto.model.User;
 import com.hillel.auto.utils.UserData;
+import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import org.testng.annotations.Listeners;
@@ -10,11 +11,13 @@ import org.testng.annotations.Test;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
-
+@Feature("Authorization feature")
+@Story("Login story")
 @Listeners(LogListener.class)
 public class LoginTest {
     private User user = UserData.defaultUser();
-
+    @Severity(SeverityLevel.BLOCKER)
+    @TmsLink("BUG6245")
     @Test
     public void loginTest() {
 

@@ -4,6 +4,7 @@ import com.hillel.auto.listener.LogListener;
 import com.hillel.auto.model.User;
 import com.hillel.auto.model.UserResponse;
 import com.hillel.auto.utils.UserData;
+import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
@@ -13,7 +14,8 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
+@Feature("Authorization feature")
+@Story("Registration story")
 @Listeners(LogListener.class)
 public class RegistrationTest {
 
@@ -30,7 +32,8 @@ public class RegistrationTest {
                             .build();
         }
 
-
+    @Severity(SeverityLevel.BLOCKER)
+    @TmsLink("BUG3545")
         @Test
         public void registrationUserTest () {
             User user = UserData.randomUser();

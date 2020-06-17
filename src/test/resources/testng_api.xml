@@ -1,16 +1,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Smoke test suite">
+<suite name="Smoke test API suite">
 
     <listeners>
         <listener class-name="com.hillel.auto.listener.TestMethodExecutionListener"/>
     </listeners>
 
     <test name="Api tests">
-<!--        <packages>-->
-<!--            <package name="io.react.realworld.api"/>-->
-<!--        </packages>-->
         <classes>
+            <class name="io.react.realworld.api.LoginTest"/>
             <class name="io.react.realworld.api.LoginTest"/>
         </classes>
     </test>
